@@ -23,7 +23,7 @@ return [
                 "John Cassaday",
                 "Olivier Coipel",
                 "Jim Lee"
-            ],
+                ],
             "writers" => [
                 "Brad Meltzer",
                 "Tom King",
@@ -38,7 +38,7 @@ return [
                 "Dan Jurgens",
                 "Jerry Siegel",
                 "Paul Levitz"
-            ],
+                ],
         ],
         [
             "title" => "American Vampire 1976 #1",
@@ -215,4 +215,4 @@ return [
             ],
         ],
     ]
-]
+];
