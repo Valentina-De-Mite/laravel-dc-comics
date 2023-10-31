@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\ComicsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,7 +12,9 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/comics', [ComicsController::class, 'index'])->name('index');
+
+Route::resource('admin_comics', ComicsController::class);

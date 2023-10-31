@@ -13,7 +13,7 @@ class ComicsController extends Controller
     {
         // return dd(Comic::all());
         $comics_list = Comic::all();
-        return view('admin.comics.index', compact('comics_list'));
+        return view('admin_comics.index', compact('comics_list'));
     }
 
     /**
@@ -23,7 +23,7 @@ class ComicsController extends Controller
      */
     public function create()
     {
-        return view('admin.comics.create');
+        return view('admin_comics.create');
     }
 
     
