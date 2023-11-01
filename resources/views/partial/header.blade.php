@@ -9,7 +9,7 @@
                 <a class="navitem" href="#" aria-current="page"
                 >CHARACTERS</a
                 >
-                <a class="navitem" href="{{route('admin.comics')}}">COMICS</a>
+                <a class="navitem" href="{{route('admin_comics.index')}}">COMICS</a>
                 <a class="navitem" href="#">MOVIES</a>
                 <a class="navitem" href="#">TV</a>
                 <a class="navitem" href="#">COLLECTIBLES</a>

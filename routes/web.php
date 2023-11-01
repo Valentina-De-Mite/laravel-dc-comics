@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ComicsController;
+use App\Http\Controllers\GuestController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,9 +13,10 @@ use App\Http\Controllers\ComicsController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/comics', [ComicsController::class, 'index'])->name('index');
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+Route::get('/', [GuestController::class, 'index'])->name('welcome');
+Route::get('/comics', [GuestController::class, 'comics'])->name('comics');
 
 Route::resource('admin_comics', ComicsController::class);
