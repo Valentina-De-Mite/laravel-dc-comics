@@ -30,7 +30,7 @@
                 @forelse($comics_list as $comic)
 
                 <tr class="">
-                    <td class=""><img src="{{$comic->thumb}}" alt=""></td>
+                    <td class=""><img class="img-fluid" src="{{$comic->thumb}}" alt=""></td>
                     <td>{{$comic->title}}</td>
                     <td>{{$comic->description}}</td>
                     <td>{{$comic->price}}</td>
