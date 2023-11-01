@@ -20,7 +20,7 @@
     <main class="bg-light">
     @yield('content')
     </main>
-    
+    @include('partial.footer')  
 </body>
 
 </html>

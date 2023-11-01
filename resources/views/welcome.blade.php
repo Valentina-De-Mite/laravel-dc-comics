@@ -4,9 +4,48 @@
 
 
 
-<div><h1>ciao</h1>
-<img src="https://imgs.search.brave.com/aUNyvZBXUulb963JH7KnQm9AMr8bcBoLsiHREOqayIU/rs:fit:612:612:1/g:ce/aHR0cHM6Ly9pNS53/YWxtYXJ0aW1hZ2Vz/LmNvbS9hc3IvOWZm/ZWYzMDMtMGZhYy00/OGRkLTg3ODctYzUy/NTk0MDk2ODAwXzEu/MTc1ZDk1Mjg2NzY0/OGEwOTczMTY2NGMy/MTE1NjNlYWIuanBl/Zz9vZG5XaWR0aD02/MTImb2RuSGVpZ2h0/PTYxMiZvZG5CZz1m/ZmZmZmY" alt="" srcset=""><img src="https://www.dccomics.com/sites/default/files/styles/covers192x291/public/comic-covers/2018/09/AC1000_DLX_162-001_HD_5ba13723281ab0.37845353.jpg?itok=ZsI-C5eX" alt="" srcset="">
+<?php
 
+// dd ($comics)
+
+
+?>
+<div class="jumbotron py-5"></div>
+
+
+<div class="black">
+   <div class="container series py-5 text-center">
+       <div class="blue popup py-1 px-3 fw-medium text-center text-light fs-4">
+            CURRENT SERIES
+        </div>
+            <div class="row-cols-sm-6 row">
+                @foreach($comics as $comic)
+
+                <div class="col-2">
+                <div class=" text-center">
+                    <img class="w-75" src="{{$comic['thumb']}}" alt="">
+                    <div class="card-body text-white ms-2 fs-6 text-decoration-none link">
+                        {{$comic['title']}}
+                    </div>
+                </div>
+            </div>
+
+                @endforeach
+            </div>
+
+            <button class="btn btn-primary py-2 px-5 fs-5 mt-4 fw-medium">
+                LOAD MORE
+            </button>
+    </div>
+                
+
+    
+  
+    </div>
+  </div>               
 </div>
+    
+
+
 
 @endsection

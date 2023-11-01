@@ -3,11 +3,11 @@
             <div class="d-flex justify-content-center ">
 
                 <div>
-                    <!-- <img src="{{Vite::asset('resources/images/dc-logo.png')}}" class="w-50" srcset=""> -->
+                    <img src="{{Vite::asset('resources/images/dc-logo.png')}}" class="w-50" srcset="">
                 </div>
                 
-                <a class="navitem" href="#" aria-current="page"
-                >CHARACTERS</a
+                <a class="navitem" href="{{route('welcome')}}" aria-current="page"
+                >HOME</a
                 >
                 <a class="navitem" href="{{route('admin_comics.index')}}">COMICS</a>
                 <a class="navitem" href="#">MOVIES</a>

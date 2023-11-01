@@ -1,1 +1,81 @@
-@import '~bootstrap/scss/bootstrap';
+@import "~bootstrap/scss/bootstrap";
+.dark {
+    background-color: #303030;
+}
+
+.navitem {
+    text-decoration: none;
+    font-size: medium;
+    padding: 0 10px;
+    color: black;
+    align-self: center;
+}
+.jumbotron {
+    background-image: url("../images/jumbotron.jpg");
+    height: 400px;
+    background-size: cover;
+
+    .container {
+        position: relative;
+    }
+}
+
+.black {
+    background-color: rgb(27, 27, 27);
+    color: white;
+}
+.blue {
+    background-color: #68bafc;
+}
+
+.current-series {
+    position: absolute;
+    color: white;
+    top: 470px;
+    left: auto;
+    background-color: #0282f9;
+    z-index: 99;
+}
+
+.series {
+    position: relative;
+}
+
+.popup {
+    position: absolute;
+    top: -25px;
+    left: 25px;
+}
+
+.banner {
+    background-image: url(../images/footer-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.DC {
+    background-repeat: no-repeat;
+}
+.f-s {
+    font-size: 15px;
+}
+
+.dark {
+    background-color: #303030;
+}
+footer {
+    a {
+        color: white !important;
+    }
+}
+
+.link:hover,
+.tb:hover {
+    text-decoration: underline !important;
+}
+
+.icon {
+    opacity: 0.5;
+}
+.icon:hover {
+    opacity: 1;
+}
