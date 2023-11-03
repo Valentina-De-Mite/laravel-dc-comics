@@ -1,4 +1,4 @@
-@extends('layouts_app')
+@extends('layouts.app')
 
 @section('content')
 
@@ -11,14 +11,12 @@
             <label for="title" class="form-label">Title</label>
             <input type="text" name="title" id="title" class="form-control" placeholder="Es Batman 3"
                 aria-describedby="titleHlper" required>
-            <small id="titleHlper" class="text-muted">Add the ComicBook title here, min 10 characters, max 100
-                characters</small>
+            <small id="titleHlper" class="text-muted">Add the ComicBook title here</small>
         </div>
         <div class="mb-3">
-            <label for="thumb" class="form-label">Comic Thumb</label>
-            <input type="text" name="thumb" id="thumb" class="form-control" placeholder="Es Batman 3"
-                aria-describedby="thumbHlper">
-            <small id="thumbHlper" class="text-muted">Add the ComicBook src here</small>
+        <label for="thumb" class="form-label">Thumb</label>
+             <input type="file" class="form-control" name="thumb" id="thumb" placeholder="select a file"
+                        aria-describedby="fileHelpImg">
         </div>
 
         <div class="mb-3">
