@@ -9,12 +9,7 @@
                 <a class="navitem" href="{{route('welcome')}}" aria-current="page"
                 >HOME</a
                 >
-                <a class="navitem" href="{{route('admin_comics.index')}}">COMICS</a>
-                <a class="navitem" href="#">MOVIES</a>
-                <a class="navitem" href="#">TV</a>
-                <a class="navitem" href="#">COLLECTIBLES</a>
-                <a class="navitem" href="#">VIDEOS</a>
-                <a class="navitem" href="#">FANS</a>
+                <a class="navitem" href="{{route('comics.index')}}">COMICS</a>
                 <a class="navitem" href="#">NEWS</a>
                 <a class="navitem" href="#">SHOP</a>
 

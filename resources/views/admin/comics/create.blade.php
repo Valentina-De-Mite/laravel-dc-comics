@@ -31,6 +31,8 @@
             <textarea class="form-control" name="price" id="price" rows="4">{{'price'}}</textarea>
         </div>
 
+
+        <div class="justify-content-center d-flex my-4"><button class="bg-primary text-light border-0 rounded py-2 px-3 fs-5" type="submit">Save</button></div>
     </form>
 </div>
 
