@@ -20,6 +20,11 @@
     }
 }
 
+.jumbotron-tot {
+    background-image: url("../images/jumbotron.jpg");
+    background-size: cover;
+}
+
 .black {
     background-color: rgb(27, 27, 27);
     color: white;
@@ -84,4 +89,8 @@ footer {
 }
 .icon:hover {
     opacity: 1;
+}
+
+.big:hover {
+    transform: scale(1.2);
 }
