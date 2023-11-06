@@ -4,7 +4,7 @@
 
 <div class="container mb-5">
     <h1 class="py-5">Edit you're comic here</h1>
-    <form  method="post" class="card p-3">
+    <form action="{{ route('comics.update', $comic) }}" method="post" class="card p-3">
         @csrf
 
         @method('PUT')
@@ -12,7 +12,7 @@
         <div class="mb-3">
             <label for="title" class="form-label">Title</label>
             <input type="text" name="title" id="title" class="form-control" placeholder="Es Batman 3"
-                aria-describedby="titleHlper" required>
+                aria-describedby="titleHlper" required value="{{ $comic->title }}">
             <small id="titleHlper" class="text-muted">Add the ComicBook title here</small>
         </div>
         <div class="mb-3">
@@ -23,12 +23,14 @@
 
         <div class="mb-3">
             <label for="description" class="form-label">Description</label>
-            <textarea class="form-control" name="description" id="description" rows="4">{{'description'}}</textarea>
+            <textarea rows="6" type="text" class="form-control" name="description" id="description" aria-describedby="helpId"
+                        placeholder="insert description" value=""> {{ $comic->description }}</textarea>
         </div>
 
         <div class="mb-3">
             <label for="price" class="form-label">Price</label>
-            <textarea class="form-control" name="price" id="price" rows="4">{{'price'}}</textarea>
+            <input type="text" class="form-control" name="price" id="price" aria-describedby="helpId"
+                        placeholder="insert price" value=" {{ $comic->price }}">
         </div>
 
 

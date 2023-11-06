@@ -57,6 +57,24 @@ class ComicsController extends Controller
 
         return to_route('comics.index', compact('comics'));
     }
+
+
+    public function edit(Comic $comic)
+    {
+        return view('admin.comics.edit', compact('comic'));
+    }
+
+    public function update(Request $request, Comic $comic)
+    {
+      $comic->title = $request->title;
+      $comic->price = $request->price;
+        $comic->description = $request->description;
+        $comic->thumb = $request->thumb;
+
+        $comic->update();
+        $comics = Comic::All();
+        return to_route('comics.index', compact('comics'));
+    }
     
     
 }
