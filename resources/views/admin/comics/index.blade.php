@@ -5,6 +5,18 @@
 
 
 <div class="container">
+
+@if(session('message'))
+
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            <strong>Success!</strong> {{session('message')}}
+        </div>
+
+        @endif
+
+
+
     <div class="table-responsive">
         <div class="d-flex justify-content-between align-item-center py-5">
             <h2>I tuoi fumetti:</h2>
@@ -55,9 +67,33 @@
 </svg></a></button>
 
 
-                    <button class="px-3 py-1 my-3 rounded bg-danger"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3-fill" viewBox="0 0 16 16">
+                    <button class="px-3 py-1 my-3 rounded bg-danger" data-bs-toggle="modal" data-bs-target="#modalId-{{$comic->id}}" ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3-fill" viewBox="0 0 16 16">
   <path d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z"/>
 </svg></button>
+
+<!-- Modal -->
+<div class="modal fade" id="modalId-{{$comic->id}}" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitle-{{$comic->id}}" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title text-dark bold" id="modalTitle-{{$comic->id}}">YOU'RE SURE ABOUT THAT?! D:</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body text-dark-emphasis">
+                                                Attention! This is a destructive operation that cannot be undone.
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+                                                <form action="{{route('comics.destroy', $comic->id)}}" method="POST">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <button type="submit" class="btn btn-danger">Confirm</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                 
                 </td>
 
@@ -87,6 +123,7 @@
             </button>
     </div>
 </div>
+
 
 
 
