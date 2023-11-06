@@ -18,7 +18,7 @@
                     <p class="fs-5 mb-3">Artist: {{$comic->artists}};</p>
                     <p class="fs-5">Writers: {{$comic->writers}};</p>
                     <p class="fs-5"> Price: {{$comic->price}};</p>
-                    <p class="fs-5"> Price: {{$comic->series}};</p>
+                    <p class="fs-5"> Series: {{$comic->series}};</p>
 
                     <a class="btn btn-success mt-4 p-3 fs-5 big m-auto" href="#" role="button">Buy Now</a>
             </div>

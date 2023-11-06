@@ -3,9 +3,11 @@
 @section('content')
 
 <div class="container mb-5">
-    <h1 class="py-5">Add a new Comic</h1>
-    <form  action="{{ route('comics.store') }}" method="post" class="card p-3">
+    <h1 class="py-5">Edit you're comic here</h1>
+    <form  method="post" class="card p-3">
         @csrf
+
+        @method('PUT')
 
         <div class="mb-3">
             <label for="title" class="form-label">Title</label>
@@ -30,7 +32,7 @@
         </div>
 
 
-        <div class="justify-content-center d-flex my-4"><button class="bg-primary text-light border-0 rounded py-2 px-3 fs-5" type="submit">Save</button></div>
+        <div class="justify-content-center d-flex my-4"><button class="bg-primary text-light border-0 rounded py-2 px-3 fs-5" type="submit">Submit</button></div>
     </form>
 </div>
 

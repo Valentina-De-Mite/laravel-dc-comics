@@ -23,7 +23,10 @@
 
                 <div class="col-2">
                 <div class=" text-center">
-                    <img class="w-75" src="{{$comic['thumb']}}" alt="">
+                    <a href="{{route('comics.show',$comic)}}">
+                        <img class="w-75" src="{{$comic['thumb']}}" alt="">
+                    </a>
+                    
                     <div class="card-body text-white ms-2 fs-6 text-decoration-none link">
                         {{$comic['title']}}
                     </div>
