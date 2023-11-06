@@ -76,5 +76,13 @@ class ComicsController extends Controller
         return to_route('comics.index', compact('comics'));
     }
     
+
+    public function destroy(Comic $comic)
+    {
+        $comic->delete();
+        $comics = Comic::All();
+        return to_route('comics.index', compact('comics'))->with('message', 'Welldone! Comic deleted successfully 👍');
+   
+    }
     
 }
